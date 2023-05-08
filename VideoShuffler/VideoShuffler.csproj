@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net20;netstandard2.0;net6</TargetFrameworks>
+    <RootNamespace>Myitian.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+    <Authors>Myitian</Authors>
+    <Company>Myitian</Company>
+    <Title>Video Shuffle</Title>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="XShuffle" Version="1.5.0" />
+  </ItemGroup>
+
+</Project>

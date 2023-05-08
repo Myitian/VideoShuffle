@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoShuffler", "VideoShuffler\VideoShuffler.csproj", "{87F97529-9E60-4633-B99E-A1B9F3CD519D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoShuffler.Example", "VideoShuffler.Example\VideoShuffler.Example.csproj", "{BC7BC973-A6B5-4528-954E-293891D851AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{87F97529-9E60-4633-B99E-A1B9F3CD519D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87F97529-9E60-4633-B99E-A1B9F3CD519D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87F97529-9E60-4633-B99E-A1B9F3CD519D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87F97529-9E60-4633-B99E-A1B9F3CD519D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC7BC973-A6B5-4528-954E-293891D851AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC7BC973-A6B5-4528-954E-293891D851AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC7BC973-A6B5-4528-954E-293891D851AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC7BC973-A6B5-4528-954E-293891D851AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {29D821E9-2802-470A-96CB-9D9BDFF1719C}
+	EndGlobalSection
+EndGlobal
