@@ -7,7 +7,7 @@ Shuffle video frame
 
 打乱单元可为矩形，边长需要满足：打乱区域边长被单元边长整除
 
-具体效果见视频
+具体效果见[视频](https://www.bilibili.com/video/BV1xg4y157sm/)
 
 # Example
 详细例子见 VideoShuffler.Example
