@@ -15,6 +15,7 @@ Shuffle video frame
 ```csharp
 using Myitian.VideoShuffler;
 using Myitian.XShuffle;
+using System.Drawing;
 
 XShuffle xs = new XShuffle();
 VideoShuffle vs = new VideoShuffle(new Size(1920, 1080), new Rectangle(0, 0, 120, 1080), new Size(120, 120));
