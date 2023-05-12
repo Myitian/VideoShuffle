@@ -1,4 +1,4 @@
-# VideoShuffler
+# VideoShuffle
 Shuffle video frame
 
 打乱视频帧
@@ -7,14 +7,13 @@ Shuffle video frame
 
 打乱单元可为矩形，边长需要满足：打乱区域边长被单元边长整除
 
-具体效果见[视频](https://www.bilibili.com/video/BV1xg4y157sm/)
+具体效果见 [Bilibili视频](https://www.bilibili.com/video/BV1xg4y157sm/)
 
 # Example
-详细例子见 VideoShuffler.Example
+详细例子见 VideoShuffle.Example
 
 ```csharp
-using Myitian.VideoShuffler;
-using Myitian.XShuffle;
+using Myitian.Shuffling;
 using System.Drawing;
 
 XShuffle xs = new XShuffle();

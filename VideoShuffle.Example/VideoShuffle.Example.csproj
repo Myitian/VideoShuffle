@@ -8,11 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="XShuffle" Version="1.5.0" />
+    <PackageReference Include="XShuffle" Version="*" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\VideoShuffler\VideoShuffler.csproj" />
+    <ProjectReference Include="..\VideoShuffle\VideoShuffle.csproj" />
   </ItemGroup>
 
 </Project>

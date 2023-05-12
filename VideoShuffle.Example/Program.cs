@@ -1,9 +1,8 @@
-﻿using Myitian.XShuffle;
-using Myitian.VideoShuffler;
+﻿using Myitian.Shuffling;
 using System.Diagnostics;
 using System.Drawing;
 
-namespace VideoShuffler.Example
+namespace VideoShuffle.Example
 {
     internal class Program
     {
@@ -75,22 +74,22 @@ namespace VideoShuffler.Example
 
             XShuffle xs = new XShuffle();
             Size vid_size = new Size(width, height);
-            VideoShuffle vs120s = new VideoShuffle(vid_size, new Rectangle(0, 0, 120, height), new Size(120, 120));
-            VideoShuffle vs60s = new VideoShuffle(vid_size, new Rectangle(120, 0, 120, height), new Size(60, 60));
-            VideoShuffle vs40s = new VideoShuffle(vid_size, new Rectangle(240, 0, 120, height), new Size(40, 40));
-            VideoShuffle vs20s = new VideoShuffle(vid_size, new Rectangle(360, 0, 120, height), new Size(20, 20));
-            VideoShuffle vs10s = new VideoShuffle(vid_size, new Rectangle(480, 0, 120, height), new Size(10, 10));
-            VideoShuffle vs5s = new VideoShuffle(vid_size, new Rectangle(600, 0, 120, height), new Size(5, 5));
-            VideoShuffle vs2s = new VideoShuffle(vid_size, new Rectangle(720, 0, 120, height), new Size(2, 2));
-            VideoShuffle vs1s = new VideoShuffle(vid_size, new Rectangle(840, 0, 120, height), new Size(1, 1));
-            VideoShuffle vs120d = new VideoShuffle(vid_size, new Rectangle(960, 0, 120, height), new Size(120, 120));
-            VideoShuffle vs60d = new VideoShuffle(vid_size, new Rectangle(1080, 0, 120, height), new Size(60, 60));
-            VideoShuffle vs40d = new VideoShuffle(vid_size, new Rectangle(1200, 0, 120, height), new Size(40, 40));
-            VideoShuffle vs20d = new VideoShuffle(vid_size, new Rectangle(1320, 0, 120, height), new Size(20, 20));
-            VideoShuffle vs10d = new VideoShuffle(vid_size, new Rectangle(1440, 0, 120, height), new Size(10, 10));
-            VideoShuffle vs5d = new VideoShuffle(vid_size, new Rectangle(1560, 0, 120, height), new Size(5, 5));
-            VideoShuffle vs2d = new VideoShuffle(vid_size, new Rectangle(1680, 0, 120, height), new Size(2, 2));
-            VideoShuffle vs1d = new VideoShuffle(vid_size, new Rectangle(1800, 0, 120, height), new Size(1, 1));
+            Myitian.Shuffling.VideoShuffle vs120s = new Myitian.Shuffling.VideoShuffle(vid_size, new Rectangle(0, 0, 120, height), new Size(120, 120));
+            Myitian.Shuffling.VideoShuffle vs60s = new Myitian.Shuffling.VideoShuffle(vid_size, new Rectangle(120, 0, 120, height), new Size(60, 60));
+            Myitian.Shuffling.VideoShuffle vs40s = new Myitian.Shuffling.VideoShuffle(vid_size, new Rectangle(240, 0, 120, height), new Size(40, 40));
+            Myitian.Shuffling.VideoShuffle vs20s = new Myitian.Shuffling.VideoShuffle(vid_size, new Rectangle(360, 0, 120, height), new Size(20, 20));
+            Myitian.Shuffling.VideoShuffle vs10s = new Myitian.Shuffling.VideoShuffle(vid_size, new Rectangle(480, 0, 120, height), new Size(10, 10));
+            Myitian.Shuffling.VideoShuffle vs5s = new Myitian.Shuffling.VideoShuffle(vid_size, new Rectangle(600, 0, 120, height), new Size(5, 5));
+            Myitian.Shuffling.VideoShuffle vs2s = new Myitian.Shuffling.VideoShuffle(vid_size, new Rectangle(720, 0, 120, height), new Size(2, 2));
+            Myitian.Shuffling.VideoShuffle vs1s = new Myitian.Shuffling.VideoShuffle(vid_size, new Rectangle(840, 0, 120, height), new Size(1, 1));
+            Myitian.Shuffling.VideoShuffle vs120d = new Myitian.Shuffling.VideoShuffle(vid_size, new Rectangle(960, 0, 120, height), new Size(120, 120));
+            Myitian.Shuffling.VideoShuffle vs60d = new Myitian.Shuffling.VideoShuffle(vid_size, new Rectangle(1080, 0, 120, height), new Size(60, 60));
+            Myitian.Shuffling.VideoShuffle vs40d = new Myitian.Shuffling.VideoShuffle(vid_size, new Rectangle(1200, 0, 120, height), new Size(40, 40));
+            Myitian.Shuffling.VideoShuffle vs20d = new Myitian.Shuffling.VideoShuffle(vid_size, new Rectangle(1320, 0, 120, height), new Size(20, 20));
+            Myitian.Shuffling.VideoShuffle vs10d = new Myitian.Shuffling.VideoShuffle(vid_size, new Rectangle(1440, 0, 120, height), new Size(10, 10));
+            Myitian.Shuffling.VideoShuffle vs5d = new Myitian.Shuffling.VideoShuffle(vid_size, new Rectangle(1560, 0, 120, height), new Size(5, 5));
+            Myitian.Shuffling.VideoShuffle vs2d = new Myitian.Shuffling.VideoShuffle(vid_size, new Rectangle(1680, 0, 120, height), new Size(2, 2));
+            Myitian.Shuffling.VideoShuffle vs1d = new Myitian.Shuffling.VideoShuffle(vid_size, new Rectangle(1800, 0, 120, height), new Size(1, 1));
 
             string dec_args = $"-i \"{inputFile}\" -v warning -pix_fmt bgra -f rawvideo -an -sn -";
             Console.WriteLine(dec_args);
@@ -102,7 +101,7 @@ namespace VideoShuffler.Example
                     RedirectStandardOutput = true
                 }
             };
-            string enc_args = $"-pix_fmt bgra -f rawvideo -s {width}x{height} -r {frame_rate} -i - -vn -i \"{inputFile}\" -v warning -c:a copy -y \"{outputFile}\"";
+            string enc_args = $"-pix_fmt bgra -f rawvideo -s {width}x{height} -r {frame_rate} -i - -vn -i \"{inputFile}\" -v warning -c:a copy -crf 10 -preset slow -y \"{outputFile}\"";
             Console.WriteLine(enc_args);
             Process ffmpeg_enc = new Process()
             {

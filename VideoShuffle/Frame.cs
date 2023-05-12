@@ -1,6 +1,4 @@
-﻿using Myitian.XShuffle;
-
-namespace Myitian.VideoShuffler
+﻿namespace Myitian.Shuffling
 {
     public class Frame : IShuffleable
     {
